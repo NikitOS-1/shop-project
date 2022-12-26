@@ -7,7 +7,7 @@ type TitleProps = {
   id?: number | string;
 };
 
-const Title = ({ title, text, id }: TitleProps) => {
+const Title = ({ title, text = "TEST", id }: TitleProps) => {
   return (
     <>
       <h1>
@@ -33,6 +33,7 @@ const App = () => {
   return (
     <>
       <Title text="Hello" title=" React JS " id={`  ID : ${10}`} />
+      <Title title=" React JS " id={`  ID : ${10}`} />
       <Content />
     </>
   );
