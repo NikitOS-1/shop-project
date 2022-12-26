@@ -1,11 +1,10 @@
-import { title } from "process";
 import React from "react";
 import ReactDOM from "react-dom/client";
 
 type TitleProps = {
   title: string;
-  text: string;
-  id: number | string;
+  text?: string;
+  id?: number | string;
 };
 
 const Title = ({ title, text, id }: TitleProps) => {
