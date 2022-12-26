@@ -1,14 +1,21 @@
+import { title } from "process";
 import React from "react";
 import ReactDOM from "react-dom/client";
 
 type TitleProps = {
-  title: string | number;
+  title: string;
+  text: string;
+  id: number | string;
 };
 
-const Title = (props: TitleProps) => {
+const Title = ({ title, text, id }: TitleProps) => {
   return (
     <>
-      <h1>Hello{props.title}</h1>
+      <h1>
+        {text}
+        {title}
+        {id}
+      </h1>
     </>
   );
 };
@@ -26,8 +33,7 @@ const Content = () => {
 const App = () => {
   return (
     <>
-      <Title title=" React JS" />
-      <Title title={10} />
+      <Title text="Hello" title=" React JS " id={`  ID : ${10}`} />
       <Content />
     </>
   );
