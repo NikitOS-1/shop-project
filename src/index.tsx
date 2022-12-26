@@ -30,6 +30,7 @@ const Content = () => {
 };
 
 const App = () => {
+  // ts-ignore
   return (
     <>
       <Title text="Hello" title=" React JS " id={`  ID : ${10}`} />
