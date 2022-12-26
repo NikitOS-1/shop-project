@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import Content from "./Content";
 
 type TitleProps = {
   title: string;
@@ -18,24 +19,13 @@ const Title = ({ title, text = "TEST", id }: TitleProps) => {
     </>
   );
 };
-const Content = () => {
-  return (
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti totam
-      eveniet atque, voluptate, provident magnam vel veritatis facilis
-      voluptates numquam debitis sed quos modi quas animi veniam commodi labore
-      nisi.
-    </p>
-  );
-};
 
 const App = () => {
-  // ts-ignore
   return (
     <>
       <Title text="Hello" title=" React JS " id={`  ID : ${10}`} />
       <Title title=" React JS " id={`  ID : ${10}`} />
-      <Content />
+      <Content p1="p1" p2="p2" />
     </>
   );
 };
