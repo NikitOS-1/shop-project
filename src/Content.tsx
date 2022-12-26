@@ -1,4 +1,4 @@
-import "./Content.scss";
+import style from "./Content.module.scss";
 
 type ContentProps = {
   p1: string;
@@ -8,8 +8,8 @@ type ContentProps = {
 const Content = ({ p1, p2 }: ContentProps) => {
   return (
     <>
-      <p className="tomato">{p1}</p>
-      <p>{p2}</p>
+      <p className={style.tomato}>{p1}</p>
+      <p className={`${style.tomato} ${style.fs50}`}>{p2}</p>
     </>
   );
 };
