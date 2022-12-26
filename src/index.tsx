@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 type TitleProps = {
-  title: string;
+  title: string | number;
 };
 
 const Title = (props: TitleProps) => {
@@ -27,8 +27,7 @@ const App = () => {
   return (
     <>
       <Title title=" React JS" />
-      <Title title=" React NodeJs" />
-      <Title title=" bla" />
+      <Title title={10} />
       <Content />
     </>
   );
