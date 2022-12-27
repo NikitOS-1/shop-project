@@ -1,12 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import Header from "./Header/Header";
 
 const App = () => {
-  return (
-    <>
-      <p>test</p>
-    </>
-  );
+  return <Header />;
 };
 
 const root = ReactDOM.createRoot(
