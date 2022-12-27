@@ -1,5 +1,7 @@
 import style from "./Header.module.scss";
 
+type Props = {};
+
 const Header = () => {
   return (
     <>
