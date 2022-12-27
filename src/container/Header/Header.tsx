@@ -1,4 +1,4 @@
-import style from "./Header.module.scss";
+import "./Header.scss";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
@@ -12,11 +12,7 @@ type Props = {};
 const Header = () => {
   return (
     <>
-      <AppBar
-        position="static"
-        sx={{
-          backgroundColor: "green",
-        }}>
+      <AppBar position="static" className="app-bar">
         <Container maxWidth="lg">
           <Toolbar>
             <IconButton
