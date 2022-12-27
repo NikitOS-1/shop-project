@@ -6,7 +6,6 @@ import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import { green } from "@mui/material/colors";
 
 type Props = {};
 
@@ -15,7 +14,7 @@ const Header = () => {
     <>
       <AppBar
         position="static"
-        style={{
+        sx={{
           backgroundColor: "green",
         }}>
         <Container maxWidth="lg">
