@@ -1,12 +1,12 @@
 import "./Header.scss";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Menu from "../../components/Menu/Menu";
 import logo from "../../assets/logo.svg";
+import CardHeader from "../../components/CardHeader/CardHeader";
 
 type Props = {};
 
@@ -24,8 +24,11 @@ const Header = () => {
               sx={{ mr: 2 }}>
               <MenuIcon />
             </IconButton>
-            <img src={logo} alt="Logo" />
+            <div className="logo">
+              <img src={logo} alt="Logo" />
+            </div>
             <Menu />
+            <CardHeader />
           </Toolbar>
         </Container>
       </AppBar>
