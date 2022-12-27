@@ -1,11 +1,9 @@
+import Header from "../../Header/Header";
+
 type Props = {};
 
 const App = (props: Props) => {
-  return (
-    <>
-      <p>app</p>
-    </>
-  );
+  return <>{<Header />}</>;
 };
 
 export default App;
