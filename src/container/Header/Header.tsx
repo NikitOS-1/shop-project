@@ -6,6 +6,7 @@ import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Menu from "../../components/Menu/Menu";
+import logo from "../../assets/logo.svg";
 
 type Props = {};
 
@@ -23,9 +24,7 @@ const Header = () => {
               sx={{ mr: 2 }}>
               <MenuIcon />
             </IconButton>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              News
-            </Typography>
+            <img src={logo} alt="Logo" />
             <Menu />
           </Toolbar>
         </Container>
