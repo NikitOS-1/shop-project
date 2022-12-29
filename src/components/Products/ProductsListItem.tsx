@@ -10,8 +10,7 @@ const ProductsListItem = (props: Props) => {
         <p className="product-desc">This is iPhone X</p>
         <div className="product-features">Type: Phone</div>
         <div className="product-features">Capacity: 64gb</div>
-        <div className="product-price">500$</div>
-        <div className="product-price">500$</div>
+        <div className="product-price">900$</div>
       </CardContent>
       <CardActions>
         <Button>Add to cart</Button>
