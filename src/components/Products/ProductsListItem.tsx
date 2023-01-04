@@ -8,7 +8,6 @@ const ProductsListItem = (props: Props) => {
       <CardContent>
         <h4 className="product-title">iProne X</h4>
         <p className="product-desc">This is iPhone X</p>
-        <p className="product-desc">This is iPhone X</p>
         <div className="product-features">Type: Phone</div>
         <div className="product-features">Type: Phone</div>
         <div className="product-features">Capacity: 64gb</div>
