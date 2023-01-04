@@ -9,7 +9,6 @@ const ProductsListItem = (props: Props) => {
         <h4 className="product-title">iProne X</h4>
         <p className="product-desc">This is iPhone X</p>
         <div className="product-features">Type: Phone</div>
-        <div className="product-features">Type: Phone</div>
         <div className="product-features">Capacity: 64gb</div>
         <div className="product-features">Capacity: 64gb</div>
         <div className="product-price">900$</div>
