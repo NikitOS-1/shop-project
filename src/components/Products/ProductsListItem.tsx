@@ -12,7 +12,6 @@ const ProductsListItem = (props: Props) => {
         <div className="product-features">Capacity: 64gb</div>
         <div className="product-price">900$</div>
         <div className="product-price">900$</div>
-        <div className="product-price">900$</div>
       </CardContent>
       <CardActions>
         <Button>Add to cart</Button>
