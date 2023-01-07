@@ -13,7 +13,6 @@ const ProductsListItem = (props: Props) => {
         <div className="product-price">900$</div>
         <div className="product-price">900$</div>
         <div className="product-price">900$</div>
-        <div className="product-price">900$</div>
       </CardContent>
       <CardActions>
         <Button>Add to cart</Button>
