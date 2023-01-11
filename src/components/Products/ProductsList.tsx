@@ -5,7 +5,7 @@ type Props = {};
 
 const ProductsList = (props: Props) => {
   return (
-    <Grid container direction="row" alignItems="center" spacing={4}>
+    <Grid container direction="row" alignItems="center" spacing={2}>
       <Grid item xs={12} sm={6} md={4}>
         <ProductsListItem />
       </Grid>

@@ -1,0 +1,33 @@
+.product-list-item {
+    padding: 15px;
+
+    .product-title {
+        text-align: center;
+        font-size: 25px;
+        margin: 10px;
+    }
+
+    .product-desc {
+        font-size: 18px;
+    }
+
+    .product-features {
+        font-size: 16px;
+        margin: 10px;
+
+        span {
+            font-weight: bold;
+        }
+    }
+
+    .product-price {
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
+
+.btn-wrap {
+    display: flex;
+    justify-content: center;
+}
