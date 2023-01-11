@@ -8,9 +8,9 @@ type Props = {};
 const App = (props: Props) => {
   return (
     <StyledEngineProvider injectFirst>
+      <CssBaseline />
       <Header />
       <Main />
-      <CssBaseline />
     </StyledEngineProvider>
   );
 };

@@ -1,10 +1,11 @@
 import Home from "../../pages/Home/Home";
 import Container from "@mui/material/Container";
+import "./Main.scss";
 
 type Props = {};
 const Main = (props: Props) => {
   return (
-    <main style={{ padding: "40px 0" }}>
+    <main className="main">
       <Container>
         <Home />
       </Container>
