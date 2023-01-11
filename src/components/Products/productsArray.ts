@@ -35,6 +35,20 @@ const productsArray: ProductsProps[] = [
     capasity: "512",
     price: 1100,
   },
+  {
+    title: "iPhone 13 Pro",
+    desc: "this is iPhone 13 Pro",
+    type: "Phone",
+    capasity: "256",
+    price: 1050,
+  },
+  {
+    title: "iPhone 14",
+    desc: "this is iPhone 14",
+    type: "Phone",
+    capasity: "512",
+    price: 1000,
+  },
 ];
 
 export default productsArray;
