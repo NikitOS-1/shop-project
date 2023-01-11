@@ -6,7 +6,7 @@ type Props = {};
 const Home = (props: Props) => {
   return (
     <>
-      <Typography variant="h4" align="center" className="home">
+      <Typography variant="h4" align="center" className="home-title">
         List of Product
       </Typography>
       <ProductsList />
