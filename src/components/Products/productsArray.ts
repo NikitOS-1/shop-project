@@ -6,12 +6,35 @@ type ProductsProps = {
   price: number;
 };
 
-const productsArray = [
+const productsArray: ProductsProps[] = [
   {
-    title: "ip",
-    desc: "this phon",
-    type: "phone",
-    capasity: "64",
+    title: "iPhone X",
+    desc: "this is iPhone X",
+    type: "Phone",
+    capasity: "64gb",
     price: 500,
   },
+  {
+    title: "iPhone XS",
+    desc: "this is iPhone XS",
+    type: "Phone",
+    capasity: "128",
+    price: 700,
+  },
+  {
+    title: "iPhone 12",
+    desc: "this is iPhone 12",
+    type: "Phone",
+    capasity: "256",
+    price: 900,
+  },
+  {
+    title: "iPhone 14 Pro",
+    desc: "this is iPhone 14 Pro",
+    type: "Phone",
+    capasity: "512",
+    price: 1100,
+  },
 ];
+
+export default productsArray;
