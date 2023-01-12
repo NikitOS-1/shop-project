@@ -5,7 +5,7 @@ import {
   CardContent,
   TextField,
 } from "@mui/material";
-import { Component, ReactNode } from "react";
+import { Component } from "react";
 import "./ProductsListItem.scss";
 
 type Props = {
