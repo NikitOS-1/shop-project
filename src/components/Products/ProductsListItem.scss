@@ -7,13 +7,24 @@
         margin: 10px;
     }
 
+    .product-img {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+
+        img {
+            width: 150px;
+            height: 200px;
+        }
+    }
+
     .product-desc {
-        font-size: 18px;
+        font-size: 14px;
     }
 
     .product-features {
         font-size: 16px;
-        margin: 10px;
+        margin: 10px 0;
 
         span {
             font-weight: bold;
