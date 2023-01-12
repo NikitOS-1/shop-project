@@ -4,6 +4,7 @@ type ProductsProps = {
   type: string;
   capasity: string;
   price: number;
+  image: string;
 };
 
 const productsArray: ProductsProps[] = [
@@ -13,6 +14,7 @@ const productsArray: ProductsProps[] = [
     type: "Phone",
     capasity: "64gb",
     price: 500,
+    image: "/images/iphone1.jpg",
   },
   {
     title: "iPhone XS",
@@ -20,6 +22,7 @@ const productsArray: ProductsProps[] = [
     type: "Phone",
     capasity: "128",
     price: 700,
+    image: "/images/iphone2.jpg",
   },
   {
     title: "iPhone 12",
@@ -27,6 +30,7 @@ const productsArray: ProductsProps[] = [
     type: "Phone",
     capasity: "256",
     price: 900,
+    image: "/images/iphone3.jpg",
   },
   {
     title: "iPhone 14 Pro",
@@ -34,6 +38,7 @@ const productsArray: ProductsProps[] = [
     type: "Phone",
     capasity: "512",
     price: 1100,
+    image: "/images/iphone3.jpg",
   },
   {
     title: "iPhone 13 Pro",
@@ -41,6 +46,7 @@ const productsArray: ProductsProps[] = [
     type: "Phone",
     capasity: "256",
     price: 1050,
+    image: "/images/iphone2.jpg",
   },
   {
     title: "iPhone 14",
@@ -48,6 +54,7 @@ const productsArray: ProductsProps[] = [
     type: "Phone",
     capasity: "512",
     price: 1000,
+    image: "/images/iphone1.jpg",
   },
 ];
 
