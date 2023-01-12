@@ -41,8 +41,8 @@ class ProductsListItem extends Component<Props, State> {
   }
 
   changeColor = () => {
-    this.setState(() => ({
-      color: "green",
+    this.setState((prevState: State) => ({
+      color: prevState.color === "green" ? "red" : "green",
     }));
   };
 
