@@ -63,7 +63,11 @@ class ProductsListItem extends Component<Props, State> {
           <div className="product-features">
             <span>Capacity:</span> {capasity}
           </div>
-          <p>Color: {this.state.color}</p>
+          <div className="color">
+            <p>Color:</p>
+            <div className={this.state.color} />
+            {/* <p>{this.state.color}</p> */}
+          </div>
           <button onClick={() => this.changeColor()}>Change color</button>
           <div className="product-price">{price}$</div>
         </CardContent>
