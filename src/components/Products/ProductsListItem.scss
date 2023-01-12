@@ -36,9 +36,18 @@
         font-size: 20px;
         font-weight: bold;
     }
-}
 
-.btn-wrap {
-    display: flex;
-    justify-content: center;
+    .product-quantity {
+        display: flex;
+        margin: 15px 0;
+
+        input {
+            text-align: center;
+        }
+    }
+
+    .btn-wrap {
+        display: flex;
+        justify-content: center;
+    }
 }
