@@ -16,8 +16,8 @@ type Props = {};
 const ProductsList = (props: Props) => {
   return (
     <Grid container direction="row" alignItems="center" spacing={2}>
-      {productsArray.map((product: ProductsProps) => (
-        <Grid item xs={12} sm={6} md={4}>
+      {productsArray.map((product: ProductsProps, i) => (
+        <Grid item xs={12} sm={6} md={4} key={i}>
           <ProductsListItem
             title={product.title}
             desc={product.desc}
