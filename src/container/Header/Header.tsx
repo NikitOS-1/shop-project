@@ -8,9 +8,14 @@ import Menu from "../../components/Menu/Menu";
 import logo from "../../assets/logo.svg";
 import CardHeader from "../../components/CardHeader/CardHeader";
 
-type Props = {};
+type Props = {
+  cartData: {
+    totalCount: number;
+    totalPrice: number;
+  };
+};
 
-const Header = () => {
+const Header = ({ cartData }: Props) => {
   return (
     <>
       <AppBar position="static" className="app-bar">
@@ -28,7 +33,7 @@ const Header = () => {
               <img src={logo} alt="Logo" />
             </div>
             <Menu />
-            <CardHeader />
+            <CardHeader cartData={cartData} />
           </Toolbar>
         </Container>
       </AppBar>
