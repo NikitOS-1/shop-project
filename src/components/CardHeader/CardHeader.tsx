@@ -8,7 +8,7 @@ const CardHeader = ({ productsInCart }: Props) => {
   return (
     <div>
       {Object.keys(productsInCart).map((productId) => (
-        <div>
+        <div key={productId}>
           {productId}:{productsInCart[parseInt(productId)]}
         </div>
       ))}
