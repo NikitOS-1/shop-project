@@ -2,14 +2,12 @@ import Home from "../../pages/Home/Home";
 import Container from "@mui/material/Container";
 import "./Main.scss";
 
-type Props = {
-  addProductCard: (total: number, price: number) => void;
-};
-const Main = ({ addProductCard }: Props) => {
+type Props = {};
+const Main = ({}: Props) => {
   return (
     <main className="main">
       <Container>
-        <Home addProductCard={addProductCard} />
+        <Home />
       </Container>
     </main>
   );
