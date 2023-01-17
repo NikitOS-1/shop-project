@@ -57,7 +57,14 @@ const ProductsListItem = ({
         <Button variant="outlined" onClick={onDecrement} disabled={count <= 1}>
           -
         </Button>
-        <TextField size="small" value={count} />
+
+        <TextField
+          size="small"
+          value={count}
+          disabled
+          className="quantity-count"
+        />
+
         <Button variant="outlined" onClick={onIncrement} disabled={count >= 10}>
           +
         </Button>
