@@ -13,9 +13,12 @@ type Props = {
     totalCount: number;
     totalPrice: number;
   };
+  productsInCart: {
+    [id: number]: number;
+  };
 };
 
-const Header = ({ cartData }: Props) => {
+const Header = ({ cartData, productsInCart }: Props) => {
   return (
     <>
       <AppBar position="static" className="app-bar">
@@ -33,7 +36,7 @@ const Header = ({ cartData }: Props) => {
               <img src={logo} alt="Logo" />
             </div>
             <Menu />
-            <CardHeader cartData={cartData} />
+            <CardHeader cartData={cartData} productsInCart={productsInCart} />
           </Toolbar>
         </Container>
       </AppBar>
