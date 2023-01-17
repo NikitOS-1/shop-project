@@ -11,10 +11,19 @@ type CardDataProps = {
   totalPrice: number;
 };
 
+type ProductsInCart = {
+  [id: number]: number;
+};
+
 const App = (props: Props) => {
   const [cartData, setCartData] = useState<CardDataProps>({
     totalCount: 0,
     totalPrice: 0,
+  });
+
+  const [productsInCart, setProductsInCart] = useState<ProductsInCart>({
+    1: 5,
+    2: 2,
   });
 
   const addProductCard = (total: number, price: number) => {
