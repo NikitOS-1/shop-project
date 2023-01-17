@@ -9,16 +9,12 @@ import logo from "../../assets/logo.svg";
 import CardHeader from "../../components/CardHeader/CardHeader";
 
 type Props = {
-  cartData: {
-    totalCount: number;
-    totalPrice: number;
-  };
   productsInCart: {
     [id: number]: number;
   };
 };
 
-const Header = ({ cartData, productsInCart }: Props) => {
+const Header = ({ productsInCart }: Props) => {
   return (
     <>
       <AppBar position="static" className="app-bar">
@@ -36,7 +32,7 @@ const Header = ({ cartData, productsInCart }: Props) => {
               <img src={logo} alt="Logo" />
             </div>
             <Menu />
-            <CardHeader cartData={cartData} productsInCart={productsInCart} />
+            <CardHeader productsInCart={productsInCart} />
           </Toolbar>
         </Container>
       </AppBar>
