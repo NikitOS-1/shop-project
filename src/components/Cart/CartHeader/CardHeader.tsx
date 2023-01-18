@@ -2,8 +2,8 @@ import { useState } from "react";
 import productsArray, {
   ProductsProps,
   getProductsObject,
-} from "../Products/productsArray";
-import iconCart from "../../assets/icon-cart.svg";
+} from "../../Products/productsArray";
+import iconCart from "../../../assets/icon-cart.svg";
 import style from "./CardHeader.module.scss";
 
 type Props = {
