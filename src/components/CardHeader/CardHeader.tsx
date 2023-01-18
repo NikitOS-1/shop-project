@@ -5,6 +5,7 @@ import productsArray, {
 } from "../Products/productsArray";
 import iconCart from "../../assets/icon-cart.svg";
 import style from "./CardHeader.module.scss";
+import { ClassNames } from "@emotion/react";
 
 type Props = {
   productsInCart: {
@@ -41,9 +42,11 @@ const CardHeader = ({
 
       {isPopUpShow && (
         <div className={style.popupWrap}>
-          <button onClick={() => setIsPopUpShow(false)}>X</button>
+          <div className={style.btnCartClose}>
+            <button onClick={() => setIsPopUpShow(false)}>X</button>
+          </div>
           {Object.keys(productsInCart).map((productId) => (
-            <div key={productId}>
+            <div key={productId} className={style.product}>
               {productsObject[+productId].title} : {productsInCart[+productId]}
             </div>
           ))}
