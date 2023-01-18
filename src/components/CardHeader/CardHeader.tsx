@@ -25,7 +25,15 @@ const CardHeader = ({
           </div>
         ))}
       </div>
-      <div>Total: 0$</div>
+      <div>
+        Total :{" "}
+        {Object.keys(productsInCart).reduce(
+          (total, productId) =>
+            total +
+            productsInCart[+productId] * productsObject[+productId].price,
+          0
+        )}
+      </div>
     </div>
   );
 };
