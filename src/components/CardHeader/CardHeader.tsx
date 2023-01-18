@@ -32,7 +32,8 @@ const CardHeader = ({
             total +
             productsInCart[+productId] * productsObject[+productId].price,
           0
-        )}
+        )}{" "}
+        $
       </div>
     </div>
   );
