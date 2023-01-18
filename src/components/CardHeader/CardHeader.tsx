@@ -3,6 +3,8 @@ import productsArray, {
   ProductsProps,
   getProductsObject,
 } from "../Products/productsArray";
+import iconCart from "../../assets/icon-cart.svg";
+import style from "./CardHeader.module.scss";
 
 type Props = {
   productsInCart: {
@@ -18,17 +20,16 @@ const CardHeader = ({
   productsObject = getProductsObject(productsArray),
 }: Props) => {
   const [isPopUpShow, setIsPopUpShow] = useState<boolean>(false);
+
   return (
-    <div>
-      <div>
-        {Object.keys(productsInCart).map((productId) => (
-          <div key={productId}>
-            {productsObject[+productId].title} : {productsInCart[+productId]}
-          </div>
-        ))}
+    <div className={style.wrapcart}>
+      <div className={style.cart}>
+        <div className={style.iconcart}>
+          <img src={iconCart} alt="cart" onClick={() => setIsPopUpShow(true)} />
+        </div>
       </div>
-      <div>
-        Total :{" "}
+
+      <div className={style.totalPriceInCart}>
         {Object.keys(productsInCart).reduce(
           (total, productId) =>
             total +
@@ -37,11 +38,15 @@ const CardHeader = ({
         )}{" "}
         $
       </div>
-      <button onClick={() => setIsPopUpShow(true)}>Show</button>
+
       {isPopUpShow && (
-        <div className="popup">
-          <h1>Hello Popup</h1>
-          <button onClick={() => setIsPopUpShow(false)}>Close</button>
+        <div className={style.popupWrap}>
+          <button onClick={() => setIsPopUpShow(false)}>X</button>
+          {Object.keys(productsInCart).map((productId) => (
+            <div key={productId}>
+              {productsObject[+productId].title} : {productsInCart[+productId]}
+            </div>
+          ))}
         </div>
       )}
     </div>
