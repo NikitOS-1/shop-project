@@ -7,7 +7,7 @@ type Props = {
   productsInCart: {
     [id: number]: number;
   };
-  productsObject: {
+  productsObject?: {
     [id: number]: ProductsProps;
   };
 };
