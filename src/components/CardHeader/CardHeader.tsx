@@ -18,11 +18,14 @@ const CardHeader = ({
 }: Props) => {
   return (
     <div>
-      {Object.keys(productsInCart).map((productId) => (
-        <div key={productId}>
-          {productsObject[+productId].title} : {productsInCart[+productId]}
-        </div>
-      ))}
+      <div>
+        {Object.keys(productsInCart).map((productId) => (
+          <div key={productId}>
+            {productsObject[+productId].title} : {productsInCart[+productId]}
+          </div>
+        ))}
+      </div>
+      <div>Total: 0$</div>
     </div>
   );
 };
