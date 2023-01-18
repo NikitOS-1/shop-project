@@ -5,7 +5,6 @@ import productsArray, {
 } from "../Products/productsArray";
 import iconCart from "../../assets/icon-cart.svg";
 import style from "./CardHeader.module.scss";
-import { ClassNames } from "@emotion/react";
 
 type Props = {
   productsInCart: {

@@ -22,7 +22,10 @@ const App = () => {
     <StyledEngineProvider injectFirst>
       <CssBaseline />
       <Header productsInCart={productsInCart} />
-      <Main addProductInCart={addProductInCart} />
+      <Main
+        addProductInCart={addProductInCart}
+        productsInCart={productsInCart}
+      />
     </StyledEngineProvider>
   );
 };
