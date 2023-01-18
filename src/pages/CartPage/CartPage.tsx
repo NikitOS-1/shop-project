@@ -1,3 +1,4 @@
+import { Typography } from "@mui/material";
 import productsArray, {
   ProductsProps,
   getProductsObject,
@@ -18,6 +19,7 @@ const CartPage = ({
 }: Props) => {
   return (
     <div>
+      <Typography variant="h4">Cart</Typography>
       <div className="product-in-cart">
         {Object.keys(productsInCart).map((productId) => (
           <div key={productId}>

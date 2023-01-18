@@ -6,7 +6,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Menu from "../../components/Menu/Menu";
 import logo from "../../assets/logo.svg";
-import CardHeader from "../../components/CardHeader/CardHeader";
+import CardHeader from "../../components/CartHeader/CardHeader";
 
 type Props = {
   productsInCart: {

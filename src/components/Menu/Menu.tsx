@@ -9,7 +9,7 @@ const Menu = (props: Props) => {
       <MenuItem to="/product">Product</MenuItem>
       <MenuItem to="/payment">Payment</MenuItem>
       <MenuItem to="/shipping">Shipping</MenuItem>
-      <MenuItem to="/cart">Card</MenuItem>
+      <MenuItem to="/cart">Cart</MenuItem>
     </>
   );
 };
