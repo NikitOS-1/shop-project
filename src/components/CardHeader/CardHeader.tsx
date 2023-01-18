@@ -1,3 +1,4 @@
+import { useState } from "react";
 import productsArray, {
   ProductsProps,
   getProductsObject,
@@ -16,6 +17,7 @@ const CardHeader = ({
   productsInCart,
   productsObject = getProductsObject(productsArray),
 }: Props) => {
+  const [isPopUpShow, setIsPopUpShow] = useState<boolean>(false);
   return (
     <div>
       <div>
@@ -35,6 +37,13 @@ const CardHeader = ({
         )}{" "}
         $
       </div>
+      <button onClick={() => setIsPopUpShow(true)}>Show</button>
+      {isPopUpShow && (
+        <div className="popup">
+          <h1>Hello Popup</h1>
+          <button onClick={() => setIsPopUpShow(false)}>Close</button>
+        </div>
+      )}
     </div>
   );
 };
