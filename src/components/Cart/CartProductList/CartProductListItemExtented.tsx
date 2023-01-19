@@ -8,12 +8,14 @@ type Props = {
   product: ProductsProps;
   productCount: number;
   removeProductFromCart: (id: number) => void;
+  changeProductQuantity: (id: number, count: number) => void;
 };
 
 const CartProductListItemExtented = ({
   product,
   productCount,
   removeProductFromCart,
+  changeProductQuantity,
 }: Props) => {
   return (
     <Grid item xs={12}>
@@ -27,8 +29,12 @@ const CartProductListItemExtented = ({
             <div className="count-cart">
               <Quantity
                 count={productCount}
-                onDecrement={() => console.log("test+")}
-                onIncrement={() => console.log("test-")}
+                onDecrement={() =>
+                  changeProductQuantity(product.id, productCount - 1)
+                }
+                onIncrement={() =>
+                  changeProductQuantity(product.id, productCount + 1)
+                }
               />
             </div>
             <div className="price-cart">

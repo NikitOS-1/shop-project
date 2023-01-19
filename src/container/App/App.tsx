@@ -41,6 +41,13 @@ const App = () => {
   //   }));
   // };
 
+  const changeProductQuantity = (id: number, count: number) => {
+    setProductsInCart((prevState: ProductsInCart) => ({
+      ...prevState,
+      [id]: count,
+    }));
+  };
+
   return (
     <StyledEngineProvider injectFirst>
       <CssBaseline />
@@ -49,6 +56,7 @@ const App = () => {
         addProductInCart={addProductInCart}
         productsInCart={productsInCart}
         removeProductFromCart={removeProductFromCart}
+        changeProductQuantity={changeProductQuantity}
       />
     </StyledEngineProvider>
   );
