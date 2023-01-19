@@ -2,6 +2,7 @@ import { Button, Card, CardContent, Grid } from "@mui/material";
 import { ProductsProps } from "../../Products/productsArray";
 import "./cartstyle.scss";
 import DeleteIcon from "@mui/icons-material/Delete";
+import Quantity from "../../Quantity/Quantity";
 
 type Props = {
   product: ProductsProps;
@@ -23,7 +24,13 @@ const CartProductListItemExtented = ({
               <img src={product.image} alt={product.title} />
               <div className="title-cart">{product.title}</div>
             </div>
-            <div className="count-cart">Количество: {productCount}</div>
+            <div className="count-cart">
+              <Quantity
+                count={productCount}
+                onDecrement={() => console.log("test+")}
+                onIncrement={() => console.log("test-")}
+              />
+            </div>
             <div className="price-cart">
               Сумма: {productCount * product.price} $
             </div>
