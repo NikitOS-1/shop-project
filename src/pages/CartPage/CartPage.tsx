@@ -22,8 +22,7 @@ const CartPage = ({
 }: Props) => {
   return (
     <div>
-      <Typography variant="h4">Cart</Typography>
-      <Grid container>
+      <Grid container spacing={2}>
         <CartProductList
           productsInCart={productsInCart}
           productsObject={productsObject}

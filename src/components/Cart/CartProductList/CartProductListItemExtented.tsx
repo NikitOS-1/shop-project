@@ -9,15 +9,19 @@ type Props = {
 
 const CartProductListItemExtented = ({ product, productCount }: Props) => {
   return (
-    <Grid item xs={12} md={4}>
+    <Grid item xs={12}>
       <Card variant="outlined">
         <CardContent>
-          <div className="iconcart">
-            <img src={product.image} alt={product.title} />
+          <div className="product-in-cart-wrap">
+            <div className="icon-cart">
+              <img src={product.image} alt={product.title} />
+              <div className="title-cart">{product.title}</div>
+            </div>
+            <div className="count-cart">Количество: {productCount}</div>
+            <div className="price-cart">
+              Сумма: {productCount * product.price} $
+            </div>
           </div>
-          <div>{product.title}</div>
-          <p>{product.price}</p>
-          <p>{productCount}</p>
         </CardContent>
       </Card>
     </Grid>

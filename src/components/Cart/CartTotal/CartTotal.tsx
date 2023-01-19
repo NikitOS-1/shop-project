@@ -1,7 +1,9 @@
+import { Button } from "@mui/material";
 import productsArray, {
   ProductsProps,
   getProductsObject,
 } from "../../../components/Products/productsArray";
+import "./CartTotal.scss";
 
 type Props = {
   productsInCart: {
@@ -23,8 +25,11 @@ const CartTotal = ({
         (total, productId) =>
           total + productsInCart[+productId] * productsObject[+productId].price,
         0
-      )}
+      )}{" "}
       $
+      <Button variant="outlined" className="btn-buy">
+        Buy
+      </Button>
     </div>
   );
 };
