@@ -32,10 +32,10 @@ const App = () => {
     <StyledEngineProvider injectFirst>
       <CssBaseline />
       <Header productsInCart={productsInCart} />
-      <button onClick={() => removeProductFromCart(1)}>delete</button>
       <Main
         addProductInCart={addProductInCart}
         productsInCart={productsInCart}
+        removeProductFromCart={removeProductFromCart}
       />
     </StyledEngineProvider>
   );

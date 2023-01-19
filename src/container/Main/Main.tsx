@@ -12,8 +12,13 @@ type Props = {
   productsInCart: {
     [id: number]: number;
   };
+  removeProductFromCart: (id: number) => void;
 };
-const Main = ({ addProductInCart, productsInCart }: Props) => {
+const Main = ({
+  addProductInCart,
+  productsInCart,
+  removeProductFromCart,
+}: Props) => {
   return (
     <main className="main">
       <Container>
@@ -27,7 +32,12 @@ const Main = ({ addProductInCart, productsInCart }: Props) => {
           <Route path="shipping" element={<ShippingPage />} />
           <Route
             path="cart"
-            element={<CartPage productsInCart={productsInCart} />}
+            element={
+              <CartPage
+                productsInCart={productsInCart}
+                removeProductFromCart={removeProductFromCart}
+              />
+            }
           />
         </Routes>
       </Container>

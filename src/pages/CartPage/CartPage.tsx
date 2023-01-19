@@ -14,11 +14,13 @@ type Props = {
   productsObject?: {
     [id: number]: ProductsProps;
   };
+  removeProductFromCart: (id: number) => void;
 };
 
 const CartPage = ({
   productsInCart,
   productsObject = getProductsObject(productsArray),
+  removeProductFromCart,
 }: Props) => {
   return (
     <div>
@@ -27,6 +29,7 @@ const CartPage = ({
           productsInCart={productsInCart}
           productsObject={productsObject}
           CartItem={CartProductListItemExtented}
+          removeProductFromCart={removeProductFromCart}
         />
       </Grid>
       <CartTotal
