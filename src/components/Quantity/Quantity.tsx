@@ -1,4 +1,5 @@
 import { Button, TextField } from "@mui/material";
+import "./Quantity.scss";
 
 type Props = {
   count: number;
