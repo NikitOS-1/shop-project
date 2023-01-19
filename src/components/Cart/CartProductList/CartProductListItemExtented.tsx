@@ -1,6 +1,7 @@
-import { Card, CardContent, Grid } from "@mui/material";
+import { Button, Card, CardContent, Grid } from "@mui/material";
 import { ProductsProps } from "../../Products/productsArray";
 import "./cartstyle.scss";
+import DeleteIcon from "@mui/icons-material/Delete";
 
 type Props = {
   product: ProductsProps;
@@ -21,6 +22,9 @@ const CartProductListItemExtented = ({ product, productCount }: Props) => {
             <div className="price-cart">
               Сумма: {productCount * product.price} $
             </div>
+            <Button variant="outlined">
+              <DeleteIcon />
+            </Button>
           </div>
         </CardContent>
       </Card>
