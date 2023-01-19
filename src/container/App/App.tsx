@@ -28,18 +28,19 @@ const App = () => {
     );
   };
 
-  const incrementCount = (id: number) => {
-    setProductsInCart((prevState: ProductsInCart) => ({
-      ...prevState,
-      [id]: prevState[id] + 1,
-    }));
-  };
-  const decrementCount = (id: number) => {
-    setProductsInCart((prevState: ProductsInCart) => ({
-      ...prevState,
-      [id]: prevState[id] - 1,
-    }));
-  };
+  // const incrementCount = (id: number) => {
+  //   setProductsInCart((prevState: ProductsInCart) => ({
+  //     ...prevState,
+  //     [id]: prevState[id] + 1,
+  //   }));
+  // };
+  // const decrementCount = (id: number) => {
+  //   setProductsInCart((prevState: ProductsInCart) => ({
+  //     ...prevState,
+  //     [id]: prevState[id] - 1,
+  //   }));
+  // };
+
   return (
     <StyledEngineProvider injectFirst>
       <CssBaseline />
