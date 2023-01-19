@@ -1,5 +1,6 @@
-import { Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import CartProductList from "../../components/Cart/CartProductList/CartProductList";
+import CartProductListItemExtented from "../../components/Cart/CartProductList/CartProductListItemExtented";
 import CartTotal from "../../components/Cart/CartTotal/CartTotal";
 import productsArray, {
   ProductsProps,
@@ -22,10 +23,13 @@ const CartPage = ({
   return (
     <div>
       <Typography variant="h4">Cart</Typography>
-      <CartProductList
-        productsInCart={productsInCart}
-        productsObject={productsObject}
-      />
+      <Grid container>
+        <CartProductList
+          productsInCart={productsInCart}
+          productsObject={productsObject}
+          CartItem={CartProductListItemExtented}
+        />
+      </Grid>
       <CartTotal
         productsInCart={productsInCart}
         productsObject={productsObject}

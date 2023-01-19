@@ -5,6 +5,7 @@ import productsArray, {
 } from "../../Products/productsArray";
 import iconCart from "../../../assets/icon-cart.svg";
 import style from "./CardHeader.module.scss";
+import CartTotal from "../CartTotal/CartTotal";
 
 type Props = {
   productsInCart: {
@@ -28,7 +29,6 @@ const CardHeader = ({
           <img src={iconCart} alt="cart" onClick={() => setIsPopUpShow(true)} />
         </div>
       </div>
-
       <div className={style.totalPriceInCart}>
         {Object.keys(productsInCart).reduce(
           (total, productId) =>
