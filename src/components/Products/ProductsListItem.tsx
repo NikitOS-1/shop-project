@@ -2,6 +2,8 @@ import { Button, Card, CardActions, CardContent } from "@mui/material";
 import { useState } from "react";
 import Quantity from "../Quantity/Quantity";
 import "./ProductsListItem.scss";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import FavoriteIcon from "@mui/icons-material/Favorite";
 
 type Props = {
   id: number;
@@ -36,6 +38,9 @@ const ProductsListItem = ({
 
   return (
     <Card className="product-list-item">
+      <Button>
+        <FavoriteBorderIcon />
+      </Button>
       <CardContent>
         <div className="product-img">
           <img src={image} alt="#" />
