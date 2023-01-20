@@ -18,12 +18,8 @@ type Review = {
 const Reviews = (props: Props) => {
   const arrReviews = [
     {
-      name: "Alex Redan",
-      text: "До этого три с половиной года пользовался s9 , в котором все полностью устраивало, но умер экран. Спустя неделю пользования могу сказать следующее:хотелось бы немного тяжелее, на 20-30 грамм.",
-    },
-    {
-      name: "Miha",
-      text: "хотелось бы немного тяжелее, на 20-30 грамм.",
+      name: "",
+      text: "",
     },
   ];
 
@@ -38,6 +34,27 @@ const Reviews = (props: Props) => {
       ...prevState,
       name: e.target.value,
     }));
+  };
+  const handleText = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setNewReview((prevState: Review) => ({
+      ...prevState,
+      text: e.target.value,
+    }));
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (newReview.name === "" || newReview.text === "") {
+      alert("All fields are required");
+    } else {
+      setRewievs((prevState: Review[]) => {
+        return [...prevState, newReview];
+      });
+      setNewReview({
+        name: "",
+        text: "",
+      });
+    }
   };
 
   return (
@@ -59,7 +76,7 @@ const Reviews = (props: Props) => {
           </Card>
         ))}
       </div>
-      <form>
+      <form onSubmit={handleSubmit}>
         <h3>Please leave a review</h3>
         <div>
           <TextField
@@ -72,11 +89,14 @@ const Reviews = (props: Props) => {
         <div style={{ margin: "20px 0" }}>
           <TextareaAutosize
             minRows={5}
-            placeholder="your text"
+            placeholder="Your text"
             value={newReview.text}
+            onChange={handleText}
           />
         </div>
-        <Button variant="outlined">Send</Button>
+        <Button type="submit" variant="outlined">
+          Send
+        </Button>
       </form>
     </>
   );
