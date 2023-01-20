@@ -1,5 +1,6 @@
 import { Typography } from "@mui/material";
 import ProductsList from "../../components/Products/ProductsList";
+import Reviews from "../../components/Reviews/Reviews";
 import "./Home.scss";
 
 type Props = {
@@ -12,6 +13,7 @@ const Home = ({ addProductInCart }: Props) => {
         List of Product
       </Typography>
       <ProductsList addProductInCart={addProductInCart} />
+      <Reviews />
     </>
   );
 };
