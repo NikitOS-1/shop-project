@@ -6,7 +6,7 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
-import { useState } from "react";
+import React, { useState } from "react";
 
 type Props = {};
 
@@ -28,6 +28,37 @@ const Reviews = (props: Props) => {
   ];
 
   const [reviews, setReviews] = useState<Review[]>(arrReviews);
+  const [newReview, setNewReview] = useState<Review>({
+    name: "",
+    text: "",
+  });
+
+  const handleName = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setNewReview((prevState: Review) => ({
+      ...prevState,
+      name: e.target.value,
+    }));
+  };
+  const handleText = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setNewReview((prevState: Review) => ({
+      ...prevState,
+      text: e.target.value,
+    }));
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (newReview.name === "" || newReview.text === "") {
+    } else {
+      setReviews((prevState: Review[]) => {
+        return [...prevState, newReview];
+      });
+      setNewReview({
+        name: "",
+        text: "",
+      });
+    }
+  };
 
   return (
     <>
@@ -46,15 +77,27 @@ const Reviews = (props: Props) => {
           </Card>
         ))}
       </div>
-      <form>
+      <form onSubmit={handleSubmit}>
         <h3>please leave a review</h3>
         <div>
-          <TextField size="small" placeholder="your name" />
+          <TextField
+            size="small"
+            placeholder="your name"
+            value={newReview.name}
+            onChange={handleName}
+          />
         </div>
         <div>
-          <TextareaAutosize minRows={5} placeholder="your text" />
+          <TextareaAutosize
+            minRows={5}
+            placeholder="your text"
+            value={newReview.text}
+            onChange={handleText}
+          />
         </div>
-        <Button variant="outlined">Send</Button>
+        <Button type="submit" variant="outlined">
+          Send
+        </Button>
       </form>
     </>
   );
