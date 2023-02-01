@@ -21,12 +21,7 @@ const Reviews = (props: Props) => {
       name: "Alex",
       text: "bla bla",
     },
-    {
-      name: "nik",
-      text: "bla bladfklfdlk",
-    },
   ];
-
   const [reviews, setReviews] = useState<Review[]>(arrReviews);
   const [newReview, setNewReview] = useState<Review>({
     name: "",
