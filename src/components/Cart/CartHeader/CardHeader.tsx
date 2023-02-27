@@ -5,7 +5,7 @@ import productsArray, {
 } from "../../Products/productsArray";
 import iconCart from "../../../assets/icon-cart.svg";
 import style from "./CardHeader.module.scss";
-import CartTotal from "../CartTotal/CartTotal";
+// import CartTotal from "../CartTotal/CartTotal";
 
 type Props = {
   productsInCart: {
